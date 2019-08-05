@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class facto{
+	public static void main(String args[])
+	{
+		Scanner ob = new Scanner(System.in);
+		System.out.print("Enter Number: ");
+		int a = ob.nextInt();
+		/*
+		if (args.length!=1)
+		{
+			System.out.println(" Usage: java facto number ");			
+			return;		
+		}
+		int n = Integer.parseInt(args[0]);
+		*/
+		System.out.println("factoiral is "+factor(a));		
+	}
+	public static int factor(int n)
+	{
+		int fact = 1;
+		for(int i=1; i<=n; i++)
+		{
+			fact*=i;
+		}
+		return fact;	
+	}	
+
+}

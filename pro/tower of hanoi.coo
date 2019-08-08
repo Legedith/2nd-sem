@@ -1,0 +1,35 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class tower{
+	int n;
+	public:
+	void calculate(int n); 
+	void hanoi(char a, char b, char c, int n);
+};
+
+void tower::hanoi(char a, char b,char c, int n)
+{
+	//solve for 2 pegs with a as source and b as destination
+	hanoi(a, c, b, 2);
+	//move a peg from a to c
+	cout<<"Move from "<<a<<" to "<<c<<endl;
+	//solve as b as source and c as destination
+	hanoi(b, a, c);
+}
+
+void tower::calculate(int n)
+{
+	hanoi('a','b','c',n);
+}
+
+
+
+int main()
+{
+	tower hanoi;
+	hanoi.calculate(4);
+	getch();
+	return 0;
+}
